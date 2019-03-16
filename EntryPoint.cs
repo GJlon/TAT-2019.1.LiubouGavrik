@@ -3,7 +3,10 @@
 namespace task_Dev_2
 {
     class EntryPoint
-    {
+    {   /// <summary>
+        /// Main method of class EntryPoint
+        /// </summary>
+        /// <param name="args">Arguments from command line</param>
         static int Main(string[] args)
         {
             try
