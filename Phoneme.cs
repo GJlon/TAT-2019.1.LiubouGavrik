@@ -41,6 +41,9 @@ namespace task_Dev_2
                 }
             }
         }
+        /// <summary>
+        /// check for "+" position
+        /// </summary>
         public void CheckingPositionOfPlus()
         {
             int onePlus = phoneme.IndexOf('+');
@@ -55,14 +58,15 @@ namespace task_Dev_2
         /// </summary>
         public void FindShockPosition()
         {
-            int a = phoneme.IndexOf('+');
-            int b= phoneme.LastIndexOf('+');
-            if (a!=-1 && b!=-1 && a == b)
+            //
+            int onePlus = phoneme.IndexOf('+');
+            int otherPlus= phoneme.LastIndexOf('+');
+            if (onePlus!=-1 && otherPlus!=-1 && onePlus == otherPlus)
             {
                 int indexOfShockPosition = phoneme.IndexOf('+') - 1;
                 ChangeHarmonyVowels(indexOfShockPosition);
             }
-            if(a==-1 && b==-1)
+            if(onePlus==-1 && otherPlus==-1)
             {
                 int indexOfShockPosition = phoneme.IndexOf('ё');
                 ChangeHarmonyVowels(indexOfShockPosition);
@@ -120,6 +124,7 @@ namespace task_Dev_2
         {
             for (int i = 0; i < l - 1; i++)
             {
+                /*introduced new variables to reduce the condition record*/
                 int index = emollientVowels.IndexOf(phoneme[i + 1]);
                 int newIndex = symbol.IndexOf(phoneme[i + 1]);
                 int indexA = pairVoicedConsonants.IndexOf(phoneme[i]);
