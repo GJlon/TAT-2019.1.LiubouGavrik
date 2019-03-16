@@ -7,6 +7,9 @@ namespace task_Dev_2
         /// Main method of class EntryPoint
         /// </summary>
         /// <param name="args">Arguments from command line</param>
+        /// <returns>everything is good - 0</returns>
+        /// <returns>string has english letters of more then one "+" - 1</returns>
+        /// <returns>other exceptions in the program - 2</returns>
         static int Main(string[] args)
         {
             try
@@ -14,11 +17,11 @@ namespace task_Dev_2
                 string originalString = args[0].ToLower();
                 int length = originalString.Length;
 
-                Phoneme s = new Phoneme(args[0]);
-                s.CheckingEnglishLetters();
-                s.CheckingPositionOfPlus();
+                Phoneme phoneme = new Phoneme(args[0]);
+                phoneme.CheckingEnglishLetters();
+                phoneme.CheckingPositionOfPlus();
 
-                Console.WriteLine(s.ReturnString(length));
+                Console.WriteLine(phoneme.ReturnString(length));
                 return 0;
             }
             catch(FormatException exs)
