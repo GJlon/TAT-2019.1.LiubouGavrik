@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace task_Dev_3
 {
+    /// <summary>
+    /// implemented algorithm for the first criterion: maximum performance 
+    ///at a fixed amount
+    /// </summary>
     class FirstCriteration : Optimizer
     {
         private float[,] quotientPS = new float[3, 4];
