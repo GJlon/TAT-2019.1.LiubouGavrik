@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace task_Dev_3
 {
+     /// <summary>
+    ///  class is designed to store information about employees
+    /// </summary>
     class Company
     {
         Employee junior = new Junior();
@@ -13,6 +16,9 @@ namespace task_Dev_3
         Employee senior = new Senior();
         Employee lead = new Lead(); 
 
+        /// <summary>
+        /// create two lists for employee storage
+        /// </summary>
         public List<Employee> employees = new List<Employee>();
         List<Employee> choosedEmployees = new List<Employee>();
         int[] numberOfProgrammers;
@@ -27,6 +33,9 @@ namespace task_Dev_3
                 employees.Add(lead);
             }
         }
+        /// <summary>
+        /// this method is for adding employees that returns selected employees
+        /// </summary>
         public List<Employee> GetEmployees(Optimizer opt)
         {
             numberOfProgrammers = opt.Choose();
