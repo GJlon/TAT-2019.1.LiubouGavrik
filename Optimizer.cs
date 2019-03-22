@@ -1,11 +1,10 @@
-﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace task_Dev_3
 {
+    /// <summary>
+    /// parent class for the first criterion and the rest
+    /// </summary>
     abstract class Optimizer
     {
         protected int projectBudget;
