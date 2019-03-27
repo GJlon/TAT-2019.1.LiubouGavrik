@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 
 namespace task_Dev_4
 {
+    
     class Seminars : Materials
     {
+        /// <summary>
+        /// seminar tasks
+        /// </summary>
         string tasks;
+        /// <summary>
+        /// implemented a dictionary in which answers to questions and questions are stored
+        /// </summary>
         Dictionary <string, string> QuestionsAnswers;
-
+        ///<summary>
+        ///check if something is written in the constructor
+        ///<summary>
         public Seminars(string tasks)
         {
             if (tasks.Length > 0)
@@ -23,12 +32,16 @@ namespace task_Dev_4
             }
             QuestionsAnswers = null;
         }
-
+        ///<summary>
+        ///matching method
+        ///<summary>
         public void AddTestAnswer(string question, string answer)
         {
             QuestionsAnswers[question] = answer;
         }
-
+        ///<summary>
+        ///override method ToString()
+        ///<summary>
         public override string ToString()
         {
             return "Seminar";
