@@ -2,8 +2,18 @@
 
 namespace task_Dev_4
 {
+    /// <summary>
+    ///entrance to the program
+    /// <summary>
     class EntryPoint
     {
+        /// <summary>
+        /// metod that allows to work with arguments from the command line
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns>everything is good - 0</returns>
+        /// <returns>string has more than 100000 letters</returns>
+        /// <returns>other exceptions in the program - 2</returns>
         static int Main(string[] args)
         {
             try
