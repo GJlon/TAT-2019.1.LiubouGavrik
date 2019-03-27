@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace task_Dev_4
 {
-    
+    /// <summary>
+    /// seminar class heir materials
+    /// </summary>
     class Seminars : Materials
     {
         /// <summary>
