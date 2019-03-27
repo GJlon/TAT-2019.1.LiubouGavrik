@@ -1,13 +1,35 @@
-﻿using System;
+using System;
+using System.Text;
 
 namespace task_Dev_4
 {
+    /// <summary>
+    /// This class is a class descendant of materials. It implements schlness lecture
+    /// </summary>
     class Lectures:Materials
     {
-        static int amountOfLectures = 10;
+        /// <summary>
+        /// the name of the lecture will be written in this variable
+        /// </summary>
+        string text;
+        /// <summary>
+        /// amount of lectures
+        /// </summary>
+        static int amountOfLectures = 4;
+        /// <summary>
+        /// variable for presentation format
+        /// </summary>        
         PresentationFormat presentationFormat;
+        /// <summary>
+        /// The following variables are used to create enum and it is easier to work with strings.
+        /// </summary>        
         readonly string[] lecture = new string[amountOfLectures];
-
+        StringBuilder lectureDescription = new StringBuilder();
+        int amountOfSeminars;
+        int amountOfLaboratoryWorks;
+        /// <summary>
+        /// A constructor is implemented in which the lecture format is checked.
+        /// </summary> 
         public Lectures( string presentationFormat)
         {
             if (presentationFormat == PresentationFormat.PDF.ToString())
@@ -23,12 +45,16 @@ namespace task_Dev_4
                 this.presentationFormat = PresentationFormat.PPT;
             }
         }
-
+        /// <summary>
+        /// enum
+        /// </summary> 
         enum PresentationFormat
         {
             Unknown, PPT, PDF
         }
-
+        /// <summary>
+        /// extension method
+        /// </summary> 
         public string this[int i]
         {
             get
@@ -37,8 +63,12 @@ namespace task_Dev_4
             }
             set
             {
+                amountOfSeminars = 7;
+                amountOfLaboratoryWorks = 5;
+
                 if (value != null && value.Length < 100000)
                 {
+                    text = value;
                     lecture[i] = value;
                 }
                 else
@@ -47,12 +77,29 @@ namespace task_Dev_4
                 }             
             }
         }
-
+        /// <summary>
+        /// GUID
+        /// </summary> 
         public string GetGuid()
         {
             return guid;
         }
-
+        /// <summary>
+        /// description metod
+        /// </summary> 
+        public string Description()
+        {
+            lectureDescription.Append(text);
+            lectureDescription.Append(" :seminars and laboratory works");
+            lectureDescription.Append("\n");
+            lectureDescription.Append(amountOfSeminars);
+            lectureDescription.Append("\n");
+            lectureDescription.Append(amountOfLaboratoryWorks);
+            return lectureDescription.ToString();
+        }
+        /// <summary>
+        /// override ToString()
+        /// </summary> 
         public override string ToString()
         {
             return "Lecture";
