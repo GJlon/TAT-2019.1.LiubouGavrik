@@ -1,5 +1,8 @@
 ﻿namespace task_Dev_4
 {
+     ///<summary>
+     ///class materials with overridden method ToString () b Equals ().
+     ///<summary>
     class Materials
     {
         protected string guid;
