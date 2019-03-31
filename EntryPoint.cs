@@ -1,43 +1,46 @@
-using System;
+﻿using System;
 
-namespace task_Dev_1
+namespace task_Dev_5
 {
     /// <summary>
-    /// gets a sequence of characters from the command line, 
-    /// displays all subsequences that don't contain duplicate characters
+    /// The main class which implements the main method
     /// </summary>
     class EntryPoint
     {
         /// <summary>
-        /// metod that allows to work with arguments from the command line
+        /// Main method of class EntryPoint
         /// </summary>
         /// <param name="args"></param>
-        /// <returns>everything is good - 0</returns>
-        /// <returns>string is empty or has less than 2 letters - 1</returns>
-        /// <returns>other exceptions in the program - 2</returns>
+        /// <returns 0> everything is good </returns>
+        /// <returns 1> some error message </returns>
         static int Main(string[] args)
         {
             try
-            {         
-                string originalString = args[0];
-                SubstringSearch s = new SubstringSearch(originalString);
-                foreach(string substringS in s.ListWithNewStrings())
-                {
-                    Console.WriteLine(substringS);
-                }
+            {
+                Point point = new Point(0, 0, 0);
+                Point newPoint = new Point(100, 200, 800);
+
+                Bird bird = new Bird();
+                Console.WriteLine(bird.WhoAmI());
+                bird.FlyTo(newPoint);
+                Console.WriteLine(bird.GetFlyTime());
+
+                Plane plane = new Plane();
+                Console.WriteLine(plane.WhoAmI());
+                plane.FlyTo(newPoint);
+                Console.WriteLine(plane.GetFlyTime());
+
+                SpaceShip spaceShip = new SpaceShip();
+                Console.WriteLine(spaceShip.WhoAmI());
+                spaceShip.FlyTo(newPoint);
+                Console.WriteLine(spaceShip.GetFlyTime());
                 return 0;
             }
-            catch (FormatException)
+            catch(Exception e)
             {
-                Console.WriteLine( "Error!Enter more letters!");
+                Console.WriteLine(e.Message);
                 return 1;
             }
-            catch(Exception)
-            {
-                Console.WriteLine("Error!!!");
-                return 2;
-            }
-           
         }
     }
 }
