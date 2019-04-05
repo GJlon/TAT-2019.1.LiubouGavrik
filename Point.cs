@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Task_3
 {
+    /// <summary>
+    /// the structure of the "point" in which we transfer the value of x and y
+    /// </summary>
     struct Point
     {
         public int X;
