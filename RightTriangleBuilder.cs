@@ -3,37 +3,32 @@ using System;
 namespace Task_3
 {
     /// <summary>
-    /// class right triangle, 
-    /// heir to class triangle overrides method for calculating area
+    /// class right triangle builder, 
+    /// heir to class Builder which overrides Triangle Build(...)
     /// </summary>
-    class RightTriangle : Triangle
+    class RightTriangleBuilder : Builder
     {
-        public RightTriangle(Point point1, Point point2, Point point3) : base(point1, point2, point3 )
+        public override Triangle Build(Point point1, Point point2, Point point3) 
         {
-            if (side12 * side12 + side23 * side23 - side31 * side31 < double.Epsilon && side31 * side31 + side23 * side23 - side12 * side12 < double.Epsilon)
+            if (point1.Y == point3.Y && point1.X == point2.X)
             {
-                throw new FormatException("This triangle isn't right triangle.");
+                return new RightTriangle(point1, point2, point3);
             }
 
-            else if (side12 * side12 + side23 * side23 - side31 * side31 < double.Epsilon && side12 * side12 + side23 * side23 - side31 * side31 < double.Epsilon)
+            else if (Successor != null)
             {
-                throw new FormatException("This triangle isn't right triangle.");
+                return Successor.Build(point1, point2, point3);
             }
 
-            else if (side31 * side31 + side12 * side12 - side23 * side23 < double.Epsilon && side12 * side12 + side23 * side23 - side31 * side31 < double.Epsilon)
+            else
             {
-                throw new FormatException("This triangle isn't right triangle.");
+                throw new Exception("Problems.");
             }
         }
 
-        /// <summary>
-        /// override implementation of method GetSquare()
-        /// </summary>
-        /// <returns></returns>
-        public override double GetSquare()
+        public RightTriangleBuilder ( Builder builder)
         {
-            double p = side12 + side23 + side31;
-            return 0.25 * (Math.Sqrt(p * (side12 + side23 - side31) * (side23 + side31 - side12) * (side31 + side12 - side23)));
+            Successor = builder;
         }
     }
 }
