@@ -1,16 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 namespace Task_3
 {
+    /// <summary>
+    /// class parent with method GetSquare() and variables
+    /// </summary>
     abstract class Triangle
     {
+        /// <summary>
+        /// points to build a triangle
+        /// </summary>
         protected Point point1;
         protected Point point2;
         protected Point point3;
+
+        /// <summary>
+        /// sides of a triangle
+        /// </summary>
         protected double side12;
         protected double side23;
         protected double side31;
@@ -18,7 +24,7 @@ namespace Task_3
         public Triangle(Point point1, Point point2, Point point3)
         {
             this.point1 = point1;
-            this.point1 = point2;
+            this.point2 = point2;
             this.point3 = point3;
             side12 = Math.Sqrt((point2.X - point1.X) * (point2.X - point1.X) + (point2.Y - point1.Y) * (point2.Y - point1.Y));
             side23 = Math.Sqrt((point3.X - point2.X) * (point3.X - point2.X) + (point3.Y - point2.Y) * (point3.Y - point2.Y));
@@ -30,11 +36,10 @@ namespace Task_3
             }
         }
 
-        public double GetSide()
-        {
-            return Math.Sqrt((point2.X - point1.X) * (point2.X - point1.X) + (point2.Y - point1.Y) * (point2.Y - point1.Y));
-        }
-
+        /// <summary>
+        /// determination of the method for calculating the area of ​​the figure
+        /// </summary>
+        /// <returns></returns>
         abstract public double GetSquare();   
     }
 }
