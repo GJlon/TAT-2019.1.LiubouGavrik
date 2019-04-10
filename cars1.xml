@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cars>
+  <car>
+    <mark>Lada</mark>
+    <model>2105</model>
+    <quantity>1</quantity>
+    <cost>20</cost>
+  </car>
+  <car>
+    <mark>Lada</mark>
+    <model>2107</model>
+    <quantity>7</quantity>
+    <cost>10</cost>
+  </car>
+  <car>
+    <mark>Daewoo</mark>
+    <model>Matiz</model>
+    <quantity>3</quantity>
+    <cost>10</cost>
+  </car>
+  <car>
+    <mark>Hyundai</mark>
+    <model>Getz</model>
+    <quantity>5</quantity>
+    <cost>10</cost>
+  </car>
+</cars>
