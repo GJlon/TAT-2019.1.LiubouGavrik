@@ -53,6 +53,7 @@ namespace task_Dev_2
         {
             int onePlus = phoneme.IndexOf('+');
             int otherPlus= phoneme.LastIndexOf('+');
+            
             if (onePlus != otherPlus)
             {
                 throw new FormatException("Error! You should write only one '+' ");
@@ -67,11 +68,13 @@ namespace task_Dev_2
             //
             int onePlus = phoneme.IndexOf('+');
             int otherPlus= phoneme.LastIndexOf('+');
+            
             if (onePlus!=-1 && otherPlus!=-1 && onePlus == otherPlus)
             {
                 int indexOfShockPosition = phoneme.IndexOf('+') - 1;
                 ChangeHarmonyVowels(indexOfShockPosition);
             }
+            
             if(onePlus==-1 && otherPlus==-1)
             {
                 int indexOfShockPosition = phoneme.IndexOf('ё');
@@ -95,26 +98,30 @@ namespace task_Dev_2
         /// works with vowels at the beginning of a word, vowels after vowels and "ъ ь" 
         /// </summary>
         /// <param name="l"></param>
-        public void Vowels(ref int l)
+        public void WorkWithVowels(ref int l)
         {
             firstsymbol = phoneme[0];
             //find whether the first letter of the word is in the line with emollient vowels
             int indexOfSubstring = emollientVowels.IndexOf(firstsymbol);
+            
             if (emollientVowels.IndexOf(firstsymbol) != -1)
             {
                 phoneme = phoneme.Remove(0, 1);
                 char insertSymbol = notEmollientVowels[indexOfSubstring];
                 phoneme = phoneme.Insert(0,"й"+ insertSymbol.ToString());
             }
+            
             for (int i = 0; i < l - 1; i++)
             {
                 int index = emollientVowels.IndexOf(phoneme[i+1]);
+                
                 if (emollientVowels.IndexOf(phoneme[i]) != -1 && emollientVowels.IndexOf(phoneme[i + 1]) != -1)
                 {
                     char insertSymbol = notEmollientVowels[index];
                     phoneme = phoneme.Remove(i + 1, 1);
                     phoneme = phoneme.Insert(i + 1, "й" + insertSymbol.ToString());               
                 }
+                
                 if ((notEmollientVowels.IndexOf(phoneme[i]) != -1) && (emollientVowels.IndexOf(phoneme[i + 1]) != -1))
                 {
                     char insertSymbol = notEmollientVowels[index];
@@ -139,6 +146,7 @@ namespace task_Dev_2
                 int indexA = pairVoicedConsonants.IndexOf(phoneme[i]);
                 int indexB = pairDeafConsonants.IndexOf(phoneme[i]);
                 int indexC = voicedConsonants.IndexOf(phoneme[i]);
+                
                 if ((indexA != -1 || indexB != -1 || indexC != -1) && (index != -1 ))
                 {
                     char insertSymbol = notEmollientVowels[index];
@@ -146,6 +154,7 @@ namespace task_Dev_2
                     phoneme = phoneme.Insert(i+1, "'" + insertSymbol.ToString());
                     l++;
                 }
+                
                 if ((indexA != -1 || indexB != -1 || indexC != -1) && newIndex != -1)
                 {
                     char insertSymbol = notEmollientVowels[newIndex];
@@ -165,6 +174,7 @@ namespace task_Dev_2
             for (int i = 0; i < l - 1; i++)
             {
                 int index = pairDeafConsonants.IndexOf(phoneme[i]);
+                
                 if (pairDeafConsonants.IndexOf(phoneme[i]) != -1 && pairVoicedConsonants.IndexOf(phoneme[i+1]) != -1)
                 {
                     char insertSymbol = pairVoicedConsonants[index];
@@ -183,6 +193,7 @@ namespace task_Dev_2
             //find whether the last letter of the word is in the line with paired voiced consonants
             lastsymbol = phoneme[l - 1];
             int indexOfLastSymbol = pairVoicedConsonants.IndexOf(lastsymbol);
+            
             if (indexOfLastSymbol != -1)
             {
                 //access line item
@@ -190,9 +201,11 @@ namespace task_Dev_2
                 phoneme = phoneme.Remove(l - 1, 1);
                 phoneme = phoneme.Insert(l - 1, insertSymbol.ToString());
             }
+            
             for (int i = 0; i < l - 1; i++)
             {
                 int index = pairVoicedConsonants.IndexOf(phoneme[i]);
+                
                 if (pairVoicedConsonants.IndexOf(phoneme[i]) != -1 && pairDeafConsonants.IndexOf(phoneme[i+1]) != -1 )
                 {
                     char insertSymbol = pairDeafConsonants[index];
@@ -220,7 +233,7 @@ namespace task_Dev_2
         public string ReturnString(int l)
         {
             FindShockPosition();
-            Vowels(ref l);
+            WorkWithVowels(ref l);
             SofteningOfTheConsonant(ref l);
             VoicingConsonants(ref l);
             StunningConsonants(ref l);
