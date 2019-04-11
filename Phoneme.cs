@@ -31,6 +31,7 @@ namespace task_Dev_2
         {
             this.phoneme = originalString;
         }
+        
         /// <summary>
         /// check for english letters
         /// </summary>
@@ -44,6 +45,7 @@ namespace task_Dev_2
                 }
             }
         }
+        
         /// <summary>
         /// check for "+" position
         /// </summary>
@@ -56,6 +58,7 @@ namespace task_Dev_2
                 throw new FormatException("Error! You should write only one '+' ");
             }                                                     
         }
+        
         /// <summary>
         /// the method that looks for a shock vowel position
         /// </summary>
@@ -75,6 +78,7 @@ namespace task_Dev_2
                 ChangeHarmonyVowels(indexOfShockPosition);
             }
         }
+        
         /// <summary>
         /// method that performs the replacement of unstressed "о" to "а"
         /// </summary>
@@ -86,6 +90,7 @@ namespace task_Dev_2
             phoneme = phoneme.Remove(i, 1);
             phoneme = phoneme.Insert(i, vowel.ToString());
         }
+        
         /// <summary>
         /// works with vowels at the beginning of a word, vowels after vowels and "ъ ь" 
         /// </summary>
@@ -119,6 +124,7 @@ namespace task_Dev_2
                 }
             }
         }
+        
         /// <summary>
         /// method in which vowels soften a previous consonant sound
         /// </summary>
@@ -148,6 +154,7 @@ namespace task_Dev_2
                 }
             }
         }
+        
         /// <summary>
         /// consonant abbreviation
         /// </summary>
@@ -166,6 +173,7 @@ namespace task_Dev_2
                 }
             }
         }
+        
         /// <summary>
         /// method of stunning consonants, at the end and in the middle
         /// </summary>
@@ -193,6 +201,7 @@ namespace task_Dev_2
                 }
             }
         }
+        
         /// <summary>
         /// find plus position
         /// </summary>
@@ -202,6 +211,7 @@ namespace task_Dev_2
             phoneme = phoneme.Remove(indexOfPlusPosition, 1);
 
         }
+        
         /// <summary>
         /// method used to transfer phonemes to Main(...)
         /// </summary>
