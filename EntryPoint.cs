@@ -22,17 +22,20 @@ namespace task_Dev_2
                 phoneme.CheckingPositionOfPlus();
 
                 Console.WriteLine(phoneme.ReturnString(length));
-                return 0;
+                
+              return 0;
             }
             catch(FormatException exs)
             {
                 Console.WriteLine(exs.Message);
-                return 1;
+                
+              return 1;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                return 2;
+                
+              return 2;
             }
         }
     }
