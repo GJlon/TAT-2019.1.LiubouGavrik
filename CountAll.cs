@@ -7,9 +7,9 @@ namespace Task_6
     /// </summary>
     class CountAll : Command
     {
-        ReadDocument readDocument;
+        ReadWorkWithDoc readDocument;
 
-        public CountAll(ReadDocument readDocument)
+        public CountAll(ReadWorkWithDoc readDocument)
         {
             this.readDocument = readDocument;
         }
