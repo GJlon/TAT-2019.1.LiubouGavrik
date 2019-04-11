@@ -7,9 +7,9 @@ namespace Task_6
     /// </summary>
     class CountTypes : Command
     {
-        ReadDocument readDocument;
+        ReadWorkWithDoc readDocument;
 
-        public CountTypes(ReadDocument readDocument)
+        public CountTypes(ReadWorkWithDoc readDocument)
         {
             this.readDocument = readDocument;
         }
