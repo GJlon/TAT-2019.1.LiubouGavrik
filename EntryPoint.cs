@@ -1,43 +1,45 @@
-using System;
+﻿using System;
 
-namespace task_Dev_1
+namespace task_Dev_2
 {
     /// <summary>
-    /// gets a sequence of characters from the command line, 
-    /// displays all subsequences that don't contain duplicate characters
+    /// Class EntryPoint. Сlass for getting phonemes of the word
     /// </summary>
     class EntryPoint
-    {
-        /// <summary>
-        /// metod that allows to work with arguments from the command line
+    {   /// <summary>
+        /// Main method of class EntryPoint
         /// </summary>
-        /// <param name="args"></param>
+        /// <param name="args">Arguments from command line</param>
         /// <returns>everything is good - 0</returns>
-        /// <returns>string is empty or has less than 2 letters - 1</returns>
+        /// <returns>string has english letters of more then one "+" - 1</returns>
         /// <returns>other exceptions in the program - 2</returns>
         static int Main(string[] args)
         {
             try
-            {         
-                string originalString = args[0];
-                SubstringSearch s = new SubstringSearch(originalString);
-                foreach(string substringS in s.ListWithNewStrings())
-                {
-                    Console.WriteLine(substringS);
-                }
-                return 0;
-            }
-            catch (FormatException)
             {
-                Console.WriteLine( "Error!Enter more letters!");
-                return 1;
+                string originalString = args[0].ToLower();
+                int length = originalString.Length;
+
+                Phoneme phoneme = new Phoneme(args[0]);
+                phoneme.CheckingEnglishLetters();
+                phoneme.CheckingPositionOfPlus();
+
+                Console.WriteLine(phoneme.ReturnString(length));
+                
+              return 0;
             }
-            catch(Exception)
+            catch(FormatException exs)
             {
-                Console.WriteLine("Error!!!");
-                return 2;
+                Console.WriteLine(exs.Message);
+                
+              return 1;
             }
-           
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                
+              return 2;
+            }
         }
     }
 }
