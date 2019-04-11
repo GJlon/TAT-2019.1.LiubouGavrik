@@ -2,6 +2,9 @@
 
 namespace task_Dev_2
 {
+    /// <summary>
+    /// Class EntryPoint. Сlass for getting phonemes of the word
+    /// </summary>
     class EntryPoint
     {   /// <summary>
         /// Main method of class EntryPoint
