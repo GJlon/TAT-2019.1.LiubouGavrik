@@ -2,6 +2,9 @@
 
 namespace task_Dev_2
 {
+    /// <summary>
+    /// The Phoneme class is used to create word phonemes.
+    /// </summary>
     class Phoneme
     {
         /// <summary>
