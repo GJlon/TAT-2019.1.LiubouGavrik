@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace task_Dev_7
+namespace ConsoleApp1
 {
     /// <summary>
     /// Heir of class Command. CountTypes describes number of car marks.

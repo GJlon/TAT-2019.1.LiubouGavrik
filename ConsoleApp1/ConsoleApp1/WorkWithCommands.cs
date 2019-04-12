@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace task_Dev_7
+namespace ConsoleApp1
 {
     /// <summary>
     /// Class gives an apportunity to work with Dictionary of commands

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace task_Dev_7
+namespace ConsoleApp1
 {
     /// <summary>
     /// class which describes average cost of cars of each brand. 

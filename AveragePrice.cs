@@ -7,9 +7,9 @@ namespace Task_6
     /// </summary>
     class AveragePrice : Command
     {
-        ReadDocument readDocument;
+        ReadWorkWithDoc readDocument;
 
-        public AveragePrice(ReadDocument readDocument)
+        public AveragePrice(ReadWorkWithDoc readDocument)
         {
             this.readDocument = readDocument;
         }

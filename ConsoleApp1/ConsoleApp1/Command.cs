@@ -1,4 +1,4 @@
-﻿namespace task_Dev_7
+﻿namespace ConsoleApp1
 {
     /// <summary>
     /// Parent class which has method Execute()

@@ -1,4 +1,4 @@
-﻿namespace task_Dev_7
+﻿namespace ConsoleApp1
 {
     class InfoTruck : InfoDocument
     {

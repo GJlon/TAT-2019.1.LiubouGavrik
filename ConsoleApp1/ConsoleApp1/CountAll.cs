@@ -1,15 +1,15 @@
 ﻿using System;
 
-namespace task_Dev_7
+namespace ConsoleApp1
 {
     /// <summary>
-    /// Heir of class Command. CountTypes describes number of car marks.
+    /// Class which describes total number of cars
     /// </summary>
-    class CountTypes : Command
+    class CountAll : Command
     {
         InfoDocument readDocument;
 
-        public CountTypes(InfoDocument readDocument)
+        public CountAll(InfoDocument readDocument)
         {
             this.readDocument = readDocument;
         }
@@ -19,7 +19,7 @@ namespace task_Dev_7
         /// </summary>
         public override void Execute()
         {
-            Console.WriteLine(readDocument.GetCountTypes());
+            Console.WriteLine(readDocument.GetCountAll());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace task_Dev_7
+﻿namespace ConsoleApp1
 {
     /// <summary>
     /// Class Invoker is command initiator which calls the command to 

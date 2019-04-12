@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace task_Dev_7
+namespace ConsoleApp1
 {
     /// <summary>
     /// This program is created for working with xml-file.
