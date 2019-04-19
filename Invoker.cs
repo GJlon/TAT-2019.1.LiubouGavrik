@@ -12,9 +12,9 @@
         /// correlates "command" and received "c"
         /// </summary>
         /// <param name="c"></param>
-        public void SetCommand(Command c)
+        public void SetCommand(Command command)
         {
-            command = c;
+            command = command;
         }
 
         /// <summary>
