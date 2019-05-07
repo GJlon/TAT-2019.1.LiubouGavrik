@@ -1,6 +1,6 @@
 ﻿namespace task_Dev_7
 {
-    class InfoTruck : InfoDocument
+    internal class InfoTruck : InfoDocument
     {
         static InfoTruck num;
 
