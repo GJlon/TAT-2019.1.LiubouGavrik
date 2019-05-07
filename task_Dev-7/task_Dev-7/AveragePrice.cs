@@ -5,7 +5,7 @@ namespace task_Dev_7
     /// <summary>
     /// class which describes average car cost
     /// </summary>
-    class AveragePrice : Command
+    internal class AveragePrice : Command
     {
         InfoDocument readDocument;
 
