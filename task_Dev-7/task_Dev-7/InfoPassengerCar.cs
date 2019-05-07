@@ -9,7 +9,7 @@ namespace task_Dev_7
     /// <summary>
     /// Class heir of WorkWithDocument. Used singleton
     /// </summary>
-    class InfoPassengerCar : InfoDocument
+    internal class InfoPassengerCar : InfoDocument
     {
         /// <summary>
         /// Help to work with information about cars
