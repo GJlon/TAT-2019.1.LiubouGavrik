@@ -6,7 +6,7 @@ namespace task_Dev_7
     /// <summary>
     /// Class gives an apportunity to work with Dictionary of commands
     /// </summary>
-    class WorkWithCommands
+    public class WorkWithCommands
     {
         public WorkWithCommands(string document1, string document2)
         {
@@ -50,7 +50,6 @@ namespace task_Dev_7
                             command++;
                             goto case 2;
                         }
-
                         break;
 
                     case 2:
@@ -62,7 +61,6 @@ namespace task_Dev_7
                             command++;
                             goto case 3;
                         }
-
                         break;
 
                     case 3:
@@ -74,7 +72,6 @@ namespace task_Dev_7
                             command++;
                             goto case 4;
                         }
-
                         break;
 
                     case 4:
@@ -86,7 +83,6 @@ namespace task_Dev_7
                             command++;
                             goto case 5;
                         }
-
                         break;
 
                     case 5:
@@ -98,7 +94,6 @@ namespace task_Dev_7
                             command++;
                             goto case 6;
                         }
-
                         break;
 
                     case 6:
@@ -110,7 +105,6 @@ namespace task_Dev_7
                             command++;
                             goto case 7;
                         }
-
                         break;
 
                     case 7:
@@ -122,14 +116,13 @@ namespace task_Dev_7
                             command++;
                             goto case 8;
                         }
-
                         break;
 
                     case 8:
                         invoker.SetCommand(listOfCommands[command]);
                         invoker.Run();
                         break;
-
+                        
                     case 9:
                         Console.WriteLine("Exit");
                         exit = true;
@@ -139,4 +132,3 @@ namespace task_Dev_7
         }
     }
 }
-
