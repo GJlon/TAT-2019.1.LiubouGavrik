@@ -6,7 +6,7 @@ namespace ConsoleApp1
     /// <summary>
     /// Class gives an apportunity to work with Dictionary of commands
     /// </summary>
-    class WorkWithCommands
+    internal class WorkWithCommands
     {
         public WorkWithCommands(string document1, string document2)
         {
@@ -139,4 +139,3 @@ namespace ConsoleApp1
         }
     }
 }
-
