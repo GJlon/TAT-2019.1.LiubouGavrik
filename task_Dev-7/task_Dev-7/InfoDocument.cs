@@ -7,7 +7,7 @@ namespace task_Dev_7
     /// class for working with a document, reading information and 
     /// implementing necessary methods
     /// </summary>
-    class InfoDocument
+    public class InfoDocument
     {
         /// <summary>
         /// variable created to work with the document
@@ -73,9 +73,7 @@ namespace task_Dev_7
                 price += Int32.Parse(car.Element("cost").Value);
                 countOfModels++;
             }
-
             averagePrice = price / countOfModels;
-        
             return averagePrice;
         }
 
