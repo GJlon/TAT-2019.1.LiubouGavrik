@@ -5,7 +5,7 @@ namespace task_Dev_7
     /// <summary>
     /// Heir of class Command. CountTypes describes number of car marks.
     /// </summary>
-    class CountTypes : Command
+    internal class CountTypes : Command
     {
         InfoDocument readDocument;
 
