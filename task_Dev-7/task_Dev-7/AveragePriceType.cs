@@ -6,7 +6,7 @@ namespace task_Dev_7
     /// class which describes average cost of cars of each brand. 
     /// It's heir of class Command.
     /// </summary>
-    class AveragePriceType : Command
+    internal class AveragePriceType : Command
     {
         InfoDocument readDocument;
 
