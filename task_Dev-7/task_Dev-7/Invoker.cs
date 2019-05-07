@@ -4,7 +4,7 @@
     /// Class Invoker is command initiator which calls the command to 
     /// perform our request
     /// </summary>
-    class Invoker
+    internal class Invoker
     {
         Command command;
 
@@ -12,9 +12,9 @@
         /// correlates "command" and received "c"
         /// </summary>
         /// <param name="c"></param>
-        public void SetCommand(Command c)
+        public void SetCommand(Command oneCommand)
         {
-            command = c;
+            command = oneCommand;
         }
 
         /// <summary>
