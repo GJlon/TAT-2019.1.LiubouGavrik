@@ -39,22 +39,18 @@ namespace Task_6
                             invoker.SetCommand(listOfCommands[command]);
                             invoker.Run();
                             break;
-
                         case 2:
                             invoker.SetCommand(listOfCommands[command]);
                             invoker.Run();
                             break;
-
                         case 3:
                             invoker.SetCommand(listOfCommands[command]);
                             invoker.Run();
                             break;
-
                         case 4:
                             invoker.SetCommand(listOfCommands[command]);
                             invoker.Run();
                             break;
-
                         case 5:
                             Console.WriteLine("exit");
                             exit = true;
