@@ -104,6 +104,5 @@ namespace task_Dev_4
         {
             return "Lecture";
         }
-
     }
 }
