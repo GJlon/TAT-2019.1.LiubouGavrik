@@ -101,7 +101,7 @@ namespace ConsoleApp1
                 Console.WriteLine("Error! Don't have count of type.");
             }
             
-            return costOfType/countOfType;
+            return costOfType / countOfType;
         }  
     }
 }
