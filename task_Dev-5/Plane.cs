@@ -65,6 +65,7 @@
             }
 
             flightTime += distance / planeFlightSpeed;
+            
             return flightTime;
         }
     }
