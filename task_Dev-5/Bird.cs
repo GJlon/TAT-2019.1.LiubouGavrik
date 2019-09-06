@@ -66,6 +66,7 @@ namespace task_Dev_5
             Random random = new Random();
             birdFlightSpeed = random.Next(0, 20);
             flightTime = distance / birdFlightSpeed;
+            
             return flightTime;
         }
     }
