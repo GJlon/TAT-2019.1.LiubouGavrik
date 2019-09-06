@@ -12,14 +12,17 @@ namespace task_Dev_4
         /// the name of the lecture will be written in this variable
         /// </summary>
         string text;
+        
         /// <summary>
         /// amount of lectures
         /// </summary>
         static int amountOfLectures = 4;
+        
         /// <summary>
         /// variable for presentation format
         /// </summary>        
         PresentationFormat presentationFormat;
+        
         /// <summary>
         /// The following variables are used to create enum and it is easier to work with strings.
         /// </summary>        
@@ -27,6 +30,7 @@ namespace task_Dev_4
         StringBuilder lectureDescription = new StringBuilder();
         int amountOfSeminars;
         int amountOfLaboratoryWorks;
+        
         /// <summary>
         /// A constructor is implemented in which the lecture format is checked.
         /// </summary> 
@@ -95,6 +99,7 @@ namespace task_Dev_4
             lectureDescription.Append(amountOfSeminars);
             lectureDescription.Append("\n");
             lectureDescription.Append(amountOfLaboratoryWorks);
+            
             return lectureDescription.ToString();
         }
         /// <summary>
