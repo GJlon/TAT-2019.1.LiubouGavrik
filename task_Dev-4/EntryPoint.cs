@@ -3,7 +3,7 @@
 namespace task_Dev_4
 {
     /// <summary>
-    ///entrance to the program
+    ///This program discribes educational disciplines
     /// <summary>
     class EntryPoint
     {
